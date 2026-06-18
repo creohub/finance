@@ -1,1 +1,0 @@
-# Finance AI Assistant Sample\n\nRun npm install and npm start.
