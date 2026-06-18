@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body>
+<h2>Finance AI Assistant</h2>
+<div id="chat"></div>
+<input id="question" placeholder="Ask about workers..." style="width:70%">
+<button onclick="askAI()">Send</button>
+<script>
+async function askAI(){
+ const question=document.getElementById('question').value;
+ const response=await fetch('/ask',{
+   method:'POST',
+   headers:{'Content-Type':'application/json'},
+   body:JSON.stringify({question})
+ });
+ const data=await response.json();
+ document.getElementById('chat').innerHTML += `<p><b>You:</b> ${question}</p><p><b>Bot:</b> ${data.answer}</p>`;
+}
+</script>
+</body>
+</html>
