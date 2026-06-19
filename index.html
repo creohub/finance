@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Finance Insights Portal</title>
+<title>CREOHUB Finance Insights</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -31,6 +31,8 @@ body{
     );
 }
 
+/* Background Effects */
+
 .bg-circle{
     position:absolute;
     border-radius:50%;
@@ -45,15 +47,17 @@ body{
 }
 
 .circle2{
-    width:400px;
-    height:400px;
-    bottom:-120px;
-    right:-120px;
+    width:450px;
+    height:450px;
+    bottom:-150px;
+    right:-150px;
 }
+
+/* Login Card */
 
 .login-card{
 
-    width:420px;
+    width:450px;
 
     padding:40px;
 
@@ -66,7 +70,7 @@ body{
     border:1px solid rgba(255,255,255,0.2);
 
     box-shadow:
-    0 25px 50px rgba(0,0,0,0.25);
+    0 25px 60px rgba(0,0,0,0.25);
 
     text-align:center;
 
@@ -75,28 +79,45 @@ body{
     z-index:10;
 }
 
+/* CREOHUB Logo */
+
 .logo{
 
-    width:90px;
-    height:90px;
+    width:220px;
+    height:75px;
 
     margin:auto;
-
-    border-radius:50%;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    font-size:34px;
+    background:#f97316;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:26px;
     font-weight:700;
 
-    background:rgba(255,255,255,0.15);
+    letter-spacing:1px;
 
-    margin-bottom:20px;
+    margin-bottom:25px;
+
+    box-shadow:
+    0 12px 30px rgba(249,115,22,.45);
 }
 
+.logo .hub{
+    color:#fff7ed;
+    margin-left:4px;
+}
+
+/* Titles */
+
 h1{
+    font-size:28px;
     margin-bottom:8px;
 }
 
@@ -106,11 +127,13 @@ h1{
     font-size:14px;
 }
 
+/* Inputs */
+
 input{
 
     width:100%;
 
-    padding:14px;
+    padding:14px 16px;
 
     margin-bottom:15px;
 
@@ -130,6 +153,8 @@ input{
 input::placeholder{
     color:#e2e8f0;
 }
+
+/* Button */
 
 button{
 
@@ -159,14 +184,18 @@ button:hover{
     transform:translateY(-2px);
 
     box-shadow:
-    0 12px 25px rgba(255,255,255,0.25);
+    0 12px 25px rgba(255,255,255,.25);
 }
+
+/* Error Message */
 
 #error{
     color:#fecaca;
     margin-top:15px;
     font-size:14px;
 }
+
+/* Footer */
 
 .footer{
     margin-top:20px;
@@ -184,12 +213,14 @@ button:hover{
 
 <div class="login-card">
 
-    <div class="logo">FI</div>
+    <div class="logo">
+        <span>CREO</span><span class="hub">HUB</span>
+    </div>
 
     <h1>Finance Insights</h1>
 
     <div class="subtitle">
-        Secure Workforce & Financial Intelligence Portal
+        Secure Financial Intelligence Portal
     </div>
 
     <input
@@ -209,7 +240,7 @@ button:hover{
     <div id="error"></div>
 
     <div class="footer">
-        Powered by Finance Insights AI
+        Powered by OPENAI
     </div>
 
 </div>
@@ -240,6 +271,8 @@ function login(){
 
     }
 }
+
+/* Login on Enter Key */
 
 document.getElementById("password")
 .addEventListener("keypress", function(event){
